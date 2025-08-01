@@ -32,9 +32,9 @@
       border-radius: 8px;
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
       position: relative;
-      width: 100%;
-      max-width: 720px;
-      aspect-ratio: 720 / 520;
+      width: 110%;
+      max-width: 792px;
+      aspect-ratio: 792 / 792;
       cursor: pointer;
       display: flex;
       justify-content: center;
@@ -43,10 +43,10 @@
     }
 
     .invitation {
-      width: 92%;
-      height: auto;
+      width: 100%;
+      min-height: 100%;
       background: rgba(255, 255, 255, 0.96);
-      padding: 2rem;
+      padding: 2.2rem;
       border-radius: 10px;
       opacity: 0;
       transition: opacity 1s ease;
@@ -61,16 +61,16 @@
     }
 
     .invitation h1 {
-      margin-bottom: 1rem;
-      font-size: 3rem;
+      margin-bottom: 1.2rem;
+      font-size: 3.3rem;
       font-family: 'Great Vibes', cursive;
       color: #b3975a;
       text-shadow: 0 0 1px #d4af37;
     }
 
     .invitation p {
-      margin: 0.5rem 0;
-      font-size: 1.1rem;
+      margin: 0.6rem 0;
+      font-size: 1.2rem;
       color: #444;
       font-family: 'Petit Formal Script', cursive;
     }
@@ -78,28 +78,28 @@
     .verse {
       font-style: italic;
       color: #9e7640;
-      margin-bottom: 1.5rem;
-      font-size: 1rem;
+      margin-bottom: 1.7rem;
+      font-size: 1.05rem;
     }
 
     @media (max-width: 576px) {
       .envelope {
         max-width: 100%;
-        aspect-ratio: 720 / 520;
+        aspect-ratio: 792 / 792;
         background-size: contain;
         height: auto;
       }
       .invitation {
-        padding: 1rem;
+        padding: 1.2rem;
       }
       .invitation h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
       }
       .invitation p {
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
       .verse {
-        font-size: 0.95rem;
+        font-size: 1rem;
       }
     }
   </style>
