@@ -7,15 +7,21 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&family=Petit+Formal+Script&display=swap" rel="stylesheet">
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
       background: linear-gradient(135deg, #fefefe, #f8f3eb);
       font-family: 'Playfair Display', serif;
-      height: 100vh;
+      height: 100%;
+      width: 100%;
+    }
+
+    .container {
+      min-height: 100vh;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      padding: 1rem;
     }
 
     .envelope {
@@ -38,7 +44,7 @@
 
     .invitation {
       width: 92%;
-      height: 94%;
+      height: auto;
       background: rgba(255, 255, 255, 0.96);
       padding: 2rem;
       border-radius: 10px;
@@ -46,7 +52,6 @@
       transition: opacity 1s ease;
       text-align: center;
       z-index: 10;
-      overflow-y: auto;
       border: 1px solid #d4af37;
       box-shadow: inset 0 0 10px rgba(212, 175, 55, 0.2);
     }
@@ -76,10 +81,31 @@
       margin-bottom: 1.5rem;
       font-size: 1rem;
     }
+
+    @media (max-width: 576px) {
+      .envelope {
+        max-width: 100%;
+        aspect-ratio: 720 / 520;
+        background-size: contain;
+        height: auto;
+      }
+      .invitation {
+        padding: 1rem;
+      }
+      .invitation h1 {
+        font-size: 2.2rem;
+      }
+      .invitation p {
+        font-size: 1rem;
+      }
+      .verse {
+        font-size: 0.95rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="container px-3">
+  <div class="container">
     <div class="envelope mx-auto" onclick="this.classList.toggle('open')">
       <div class="invitation">
         <p class="verse">"Assim já não são dois, mas uma só carne."<br><small>Mateus 19,6</small></p>
